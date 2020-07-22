@@ -41,13 +41,32 @@
         avec une sorte d'acrementation += 
         exemple (element.innerHTML += "string";) 
         Observation....-->
-   <h1>+= innerText alors?</h1>  
+   <h1 id = "four">+= innerText alors?</h1>  
    <!-- pareil avec innerText 
     Observation...
 -->
     </div>
 <script>
 
+    let one = document.getElementById("one");
+    one.textContent = "Yo je suis un textContent, et toi t'es qui ?"
+    console.log(one);
+    console.dir(one);
+
+    let two = document.getElementById("two");
+    two.innerHTML = "Yo je suis un innerHTML ! ravi de vous rencontrer"
+    console.log(two);
+    console.dir(two);
+
+    let three = document.getElementById("three");
+    three.innerHTML+= "<br>Yo je suis un innerHTML incrémenté au texte de base";
+    console.log(three);
+    console.dir(three);
+
+    let four = document.getElementById("four");
+    four.innerText+= "<br>Yo je suis un innerText incrémenté au texte de base";
+    console.log(four);
+    console.dir(four);
 
 </script>
 <!-- :

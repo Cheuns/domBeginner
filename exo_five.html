@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dom_exercice_four</title>
+    <title>dom_exercice_five</title>
 </head>
 <body style="background-color: green">
     <header>
@@ -16,7 +16,7 @@
             </ul>
     </header>
     <div>
-    <h1 id="one" style="background: red">event intrusif</h1>
+    <h1 id="one" style="background: red" onclick = "one.style.backgroundColor = 'blue'">event intrusif</h1>
     <!-- 
         ajouter un evenement onclick sur la balise h1 one 
         (en intrusif(directement en attribu dans la balise html)) 
@@ -40,6 +40,24 @@
     </div>
 <script>
 
+    const two = document.getElementById('two');
+    const button = document.querySelector('button');
+    
+    two.addEventListener('click', function(event) {
+
+        two.style.backgroundColor = 'purple';
+});
+
+    button.addEventListener('click', function(event) {
+        
+        button.style.backgroundColor = `pink`;
+});
+
+    button.onclick = function(event) {
+
+        two.style.backgroundColor = 'yellow';
+};
+
 </script>
 
 <!-- 
@@ -51,7 +69,5 @@
     console log et dir celle ci dans le corps de la function (le bloc d'instrucion)
     observation..... 
 -->
-
-    
 </body>
 </html>
