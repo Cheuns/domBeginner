@@ -15,10 +15,11 @@
             </ul>
     
         </header>
+            <p>Je suis un deuxième paragraphe</p>
         <main>
-            <section>
-                <div>section 1 enfant 1 (index de tableau [0])</div>
-                <div>section 1 enfant 2 (index de tableau [1])</div>
+            <section id="section1">
+                <div class = "content">section 1 enfant 1 (index de tableau [0])</div>
+                <div class = "content">section 1 enfant 2 (index de tableau [1])</div>
             </section>
             <section>
                 <div>section 2 enfant 1 (index de tableau [0])</div>
@@ -28,9 +29,16 @@
                 <div>section 3 enfant 1 (index de tableau [0])</div>
                 <div>section 3 enfant 2 (index de tableau [1])</div>
             </section>
+
+            <div>
+                <article>Contenu 1</article>
+                <article>Contenu 2</article>
+                <article>Contenu 3</article>
+            </div>
+
         </main>
         <footer>
-
+            <p>Je suis le troisième paragraphe situé dans le pied de page</p>
         </footer>
 
    
@@ -48,6 +56,42 @@
 // resulat escompter le console log de tout ca et console dir egalement
 // -regarder entre query selectorALL et un autre des facons de chercher des Node
 // -res = difference entre htmlcollection et NodeList
+
+//ById
+const sect1 = document.getElementById("section1");
+
+console.log(sect1);
+console.dir(sect1);
+
+//ByClassName
+const contents = document.getElementsByClassName("content");
+const firstContent = contents[0];
+const secondContent = contents[1];
+
+console.log(contents);
+console.log(firstContent, secondContent);
+console.dir(firstContent, secondContent);
+
+//ByTagName
+const articles = document.getElementsByTagName('article');
+const thirdArticle = articles[2];
+
+console.log(articles);
+console.log(thirdArticle);
+console.dir(articles);
+console.dir(thirdArticle);
+
+//querySelector
+const paragraph = document.querySelector("p");
+
+console.log(paragraph);
+console.dir(paragraph);
+
+//querySelectorAll
+const allParagraph = document.querySelectorAll("p");
+
+console.log(allParagraph);
+console.dir(allParagraph);
 
 </script>
     
